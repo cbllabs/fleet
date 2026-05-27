@@ -17,7 +17,7 @@ document.querySelectorAll('#navLinks a').forEach((a) =>
 );
 
 // Stagger within grouped reveals
-['.feature-grid', '.team-grid', '.timeline'].forEach((sel) => {
+['.feature-grid', '.team-grid', '.cases'].forEach((sel) => {
   document.querySelectorAll(`${sel} .reveal`).forEach((el, i) => {
     el.style.setProperty('--d', `${i * 0.07}s`);
   });
@@ -52,4 +52,40 @@ if (chart) {
     { threshold: 0.3 }
   );
   chartObserver.observe(chart);
+}
+
+// Feature flip cards — hover flips on desktop (CSS); tap flips on touch; keyboard toggles
+const noHover = window.matchMedia('(hover: none)').matches;
+document.querySelectorAll('.feature').forEach((f) => {
+  if (noHover) f.addEventListener('click', () => f.classList.toggle('flipped'));
+  f.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      f.classList.toggle('flipped');
+    }
+  });
+});
+
+// Case study — click a tile to expand it, others collapse to switchable chips; X closes
+const cases = document.getElementById('cases');
+if (cases) {
+  const items = [...cases.querySelectorAll('.case')];
+  const close = () => {
+    cases.classList.remove('is-open');
+    items.forEach((c) => c.classList.remove('active'));
+  };
+  items.forEach((el) => {
+    el.addEventListener('click', (e) => {
+      if (e.target.closest('.case-close')) {
+        e.stopPropagation();
+        close();
+        return;
+      }
+      cases.classList.add('is-open');
+      items.forEach((c) => c.classList.toggle('active', c === el));
+    });
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && cases.classList.contains('is-open')) close();
+  });
 }
