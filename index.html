@@ -3,357 +3,222 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fast Fleet — The company brain that gives your team time back</title>
-  <meta name="description" content="Fast Fleet is the company brain that connects every tool your team already uses — automating the busywork so your people do 30% more in the same hours. Live in days, not months." />
+  <title>Fast Fleet — the company brain for your team</title>
+  <meta name="description" content="Fast Fleet is the company brain that connects the tools your team already uses, so the busywork runs itself. Set up in days. Your data stays yours." />
 
-  <meta property="og:title" content="Fast Fleet — do 30% more in the same time" />
-  <meta property="og:description" content="The company brain that connects your stack, automates the busywork, and gives your team their time back." />
+  <meta property="og:title" content="Fast Fleet — the company brain for your team" />
+  <meta property="og:description" content="Connect every tool your team already uses. The busywork runs itself. Set up in days." />
   <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#f5f5f1" />
+  <meta name="theme-color" content="#F6F8FA" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 
   <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-  <!-- ambient background -->
-  <div class="bg-grid" aria-hidden="true"></div>
-  <div class="glow glow-a" aria-hidden="true"></div>
-  <div class="glow glow-b" aria-hidden="true"></div>
+  <div class="shell">
 
-  <!-- NAV -->
-  <header class="nav" id="nav">
-    <div class="container nav-inner">
-      <a href="#home" class="brand">
-        <span class="brand-mark" aria-hidden="true"></span>
-        Fast&nbsp;Fleet
+    <!-- NAV -->
+    <nav class="nav" id="nav">
+      <a href="#home" class="brand" aria-label="Fast Fleet">
+        <img src="/fast-logo-dark.svg" alt="Fast" class="brand-logo" />
+        <span class="brand-sep" aria-hidden="true"></span>
+        <span class="brand-sub">Fleet</span>
       </a>
-      <nav class="nav-links" id="navLinks">
+      <div class="nav-links" id="navLinks">
         <a href="#product">Product</a>
         <a href="#adoption">Adoption</a>
-        <a href="#team">Team</a>
         <a href="#privacy">Privacy</a>
-        <a href="#case-study">In&nbsp;action</a>
-      </nav>
-      <a href="#contact" class="btn btn-primary btn-sm nav-cta">Book a call</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <a href="#team">Team</a>
+      </div>
+      <a href="#contact" class="btn btn-chrome btn-sm nav-cta">Book a call</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
-    </div>
-  </header>
+    </nav>
 
-  <main>
     <!-- HERO -->
-    <section class="hero" id="home">
-      <div class="container hero-inner reveal">
-        <span class="kicker"><span class="kicker-dot"></span> Time is your most valuable asset</span>
-        <h1 class="hero-title">
-          Do <span class="grad">30% more</span>.<br />
-          In the hours you already have.
-        </h1>
-        <p class="hero-sub">
-          Fast Fleet is the company brain that connects every tool your team already uses —
-          automating the busywork so your people spend their hours on the work that actually
-          moves the business forward.
-        </p>
-        <div class="hero-cta">
-          <a href="#contact" class="btn btn-primary">Book a call <span class="arrow">&rarr;</span></a>
-          <a href="#product" class="btn btn-ghost">See how it works</a>
+    <header class="hero" id="home">
+      <div class="hero-metal fast-liquid-metal-css" aria-hidden="true"></div>
+      <div class="hero-overlay">
+        <div class="hero-meta">
+          <span>Fast Fleet — the company brain</span>
+          <span>Set up in days · your data stays yours</span>
         </div>
-
-        <div class="hero-stats">
-          <div class="stat"><span class="stat-num grad" data-count="30" data-suffix="%">30%</span><span class="stat-label">more goals achieved</span></div>
-          <div class="stat"><span class="stat-num grad" data-count="10" data-suffix="×">10×</span><span class="stat-label">faster to adopt</span></div>
-          <div class="stat"><span class="stat-num grad">Days</span><span class="stat-label">not months to go live</span></div>
-          <div class="stat"><span class="stat-num grad">100%</span><span class="stat-label">control of your data</span></div>
+        <div class="hero-body">
+          <h1>Do 30% more<br />in the hours<br />you already have.</h1>
+          <p>Fast Fleet is the company brain that connects the tools your team already uses — so the busywork runs itself and your people spend their time on the work that matters.</p>
+          <div class="hero-ctas">
+            <a href="#contact" class="btn btn-chrome">Book a call</a>
+            <a href="#product" class="btn btn-ghost-light">See how it works →</a>
+          </div>
         </div>
       </div>
+    </header>
+
+    <!-- STATS STRIP -->
+    <section class="stats reveal" aria-label="Key metrics">
+      <div class="stat"><span class="stat-wash fast-liquid-metal-css" aria-hidden="true"></span><span class="stat-val">30%</span><span class="stat-lbl">More work shipped</span></div>
+      <div class="stat"><span class="stat-wash fast-liquid-metal-css" aria-hidden="true"></span><span class="stat-val">10×</span><span class="stat-lbl">Faster to adopt</span></div>
+      <div class="stat"><span class="stat-wash fast-liquid-metal-css" aria-hidden="true"></span><span class="stat-val">Days</span><span class="stat-lbl">Not months to launch</span></div>
+      <div class="stat"><span class="stat-wash fast-liquid-metal-css" aria-hidden="true"></span><span class="stat-val">100%</span><span class="stat-lbl">Control of your data</span></div>
     </section>
 
-    <!-- LOGOS / TRUST STRIP -->
+    <!-- TRUST STRIP -->
     <section class="strip reveal">
-      <div class="container">
-        <p class="strip-label">Built to plug into the tools you already run on</p>
-        <div class="strip-row">
-          <span>Slack</span><span>Gmail</span><span>Notion</span><span>Salesforce</span>
-          <span>Google&nbsp;Drive</span><span>GitHub</span><span>HubSpot</span><span>Jira</span>
-        </div>
+      <p class="mono-label">Plugs into the tools you already run on</p>
+      <div class="strip-row">
+        <span>Slack</span><span>Gmail</span><span>Notion</span><span>Salesforce</span>
+        <span>Google&nbsp;Drive</span><span>GitHub</span><span>HubSpot</span><span>Jira</span>
       </div>
     </section>
 
     <!-- ADOPTION -->
-    <section class="section" id="adoption">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Adoption</span>
-          <h2>The simplest tool your company will ever roll out.</h2>
-          <p class="lead">
-            Most business software means weeks of training, migration headaches, and lost
-            productivity before anyone sees value. Fast Fleet speaks plain language — your team
-            is productive on day one, because there's nothing new to learn.
-          </p>
+    <section class="panel reveal" id="adoption">
+      <div class="panel-head">
+        <span class="eyebrow">Adoption</span>
+        <h2>The simplest tool your company will roll out.</h2>
+        <p class="lead">Most software means weeks of training and lost productivity before anyone sees value. Fast Fleet speaks plain language — your team is productive on day one.</p>
+      </div>
+      <div class="chart">
+        <div class="chart-head">
+          <span class="mono-label">Time to team-wide proficiency</span>
+          <span class="mono-label dim">Typical onboarding · illustrative</span>
         </div>
-
-        <div class="chart card reveal">
-          <div class="chart-head">
-            <h3>Time to team-wide proficiency</h3>
-            <span class="chart-note">Typical onboarding windows · illustrative</span>
+        <div class="chart-bars" id="chart">
+          <div class="bar-row">
+            <span class="bar-label">Enterprise ERP</span>
+            <div class="bar-track"><div class="bar" style="--w:100%"></div></div>
+            <span class="bar-val">~6 months</span>
           </div>
-          <div class="chart-bars" id="chart">
-            <div class="bar-row">
-              <span class="bar-label">Enterprise ERP</span>
-              <div class="bar-track"><div class="bar" style="--w:100%"></div></div>
-              <span class="bar-val">~6 months</span>
-            </div>
-            <div class="bar-row">
-              <span class="bar-label">CRM platform</span>
-              <div class="bar-track"><div class="bar" style="--w:39%"></div></div>
-              <span class="bar-val">~10 weeks</span>
-            </div>
-            <div class="bar-row">
-              <span class="bar-label">Analytics / BI suite</span>
-              <div class="bar-track"><div class="bar" style="--w:23%"></div></div>
-              <span class="bar-val">~6 weeks</span>
-            </div>
-            <div class="bar-row">
-              <span class="bar-label">Billing &amp; invoicing</span>
-              <div class="bar-track"><div class="bar" style="--w:16%"></div></div>
-              <span class="bar-val">~4 weeks</span>
-            </div>
-            <div class="bar-row featured">
-              <span class="bar-label">Fast Fleet</span>
-              <div class="bar-track"><div class="bar bar-accent" style="--w:5%"></div></div>
-              <span class="bar-val">~2 days</span>
-            </div>
+          <div class="bar-row">
+            <span class="bar-label">CRM platform</span>
+            <div class="bar-track"><div class="bar" style="--w:39%"></div></div>
+            <span class="bar-val">~10 weeks</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">Analytics / BI</span>
+            <div class="bar-track"><div class="bar" style="--w:23%"></div></div>
+            <span class="bar-val">~6 weeks</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">Billing suite</span>
+            <div class="bar-track"><div class="bar" style="--w:16%"></div></div>
+            <span class="bar-val">~4 weeks</span>
+          </div>
+          <div class="bar-row featured">
+            <span class="bar-label">Fast Fleet</span>
+            <div class="bar-track"><div class="bar bar-fast" style="--w:6%"></div></div>
+            <span class="bar-val">~2 days</span>
           </div>
         </div>
       </div>
     </section>
 
     <!-- PRODUCT -->
-    <section class="section" id="product">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">The product</span>
-          <h2>Meet your <span class="grad">company brain</span>.</h2>
-          <p class="lead">
-            Fast Fleet plugs into your entire stack — docs, email, CRM, calendars, code, support —
-            and turns scattered, siloed knowledge into one intelligence layer. Then we build custom
-            integrations around the workflows that are unique to <em>your</em> business.
-          </p>
-        </div>
-
-        <div class="feature-grid">
-          <article class="card feature reveal">
-            <div class="feature-icon">◍</div>
-            <h3>Custom-built integrations</h3>
-            <p>We don't hand you a generic bot. We wire Fast Fleet into the exact tools and processes your team runs every day.</p>
-          </article>
-          <article class="card feature reveal">
-            <div class="feature-icon">⬡</div>
-            <h3>One unified knowledge layer</h3>
-            <p>Every doc, thread, and ticket becomes instantly searchable and actionable — no more hunting across ten tabs.</p>
-          </article>
-          <article class="card feature reveal">
-            <div class="feature-icon">⟳</div>
-            <h3>Workflows on autopilot</h3>
-            <p>Meeting notes, follow-ups, status updates, handoffs — the repetitive glue work runs itself in the background.</p>
-          </article>
-          <article class="card feature reveal">
-            <div class="feature-icon">✦</div>
-            <h3>Just talk to it</h3>
-            <p>Plain language in, real work out. If your team can write a message, they already know how to use Fast Fleet.</p>
-          </article>
-          <article class="card feature reveal">
-            <div class="feature-icon">⇄</div>
-            <h3>Always in sync</h3>
-            <p>Change something once and it propagates everywhere it should. No copy-paste, no drift, no stale data.</p>
-          </article>
-          <article class="card feature reveal">
-            <div class="feature-icon">🛡</div>
-            <h3>Secure by design</h3>
-            <p>Your data stays yours. Granular control over what's shared, what's local, and what the brain can touch.</p>
-          </article>
-        </div>
-      </div>
+    <section class="section-head reveal" id="product">
+      <span class="eyebrow">The product</span>
+      <h2>Meet your company brain.</h2>
+      <p class="lead">Fast Fleet connects your whole stack — docs, email, CRM, calendars, code, support — into one place that knows how your business works. Then we build custom integrations around your real workflows.</p>
     </section>
+    <div class="feature-grid">
+      <article class="feature reveal"><span class="feature-tag">Integrations</span><h3>Built around your stack</h3><p>Not a generic bot. We wire Fast Fleet into the exact tools and steps your team runs every day.</p></article>
+      <article class="feature reveal"><span class="feature-tag">Knowledge</span><h3>One source of truth</h3><p>Every doc, thread, and ticket becomes searchable and actionable — no more hunting across ten tabs.</p></article>
+      <article class="feature reveal"><span class="feature-tag">Automation</span><h3>Busywork on autopilot</h3><p>Notes, follow-ups, status updates, handoffs — the repetitive glue work runs itself in the background.</p></article>
+      <article class="feature reveal"><span class="feature-tag">Interface</span><h3>Just talk to it</h3><p>Plain language in, real work out. If your team can write a message, they can use Fast Fleet.</p></article>
+      <article class="feature reveal"><span class="feature-tag">Sync</span><h3>Always current</h3><p>Change something once and it updates everywhere it should. No copy-paste, no drift, no stale data.</p></article>
+      <article class="feature reveal"><span class="feature-tag">Security</span><h3>Yours by default</h3><p>Granular control over what's shared, what stays local, and what the brain is allowed to touch.</p></article>
+    </div>
 
     <!-- BENEFITS -->
-    <section class="section section-tight" id="benefits">
-      <div class="container">
-        <div class="benefits-band reveal">
-          <div class="benefit">
-            <span class="benefit-num grad">~9 hrs</span>
-            <p>of busywork removed per employee, every week</p>
-          </div>
-          <div class="benefit">
-            <span class="benefit-num grad">1 source</span>
-            <p>of truth instead of a dozen disconnected tools</p>
-          </div>
-          <div class="benefit">
-            <span class="benefit-num grad">Day 1</span>
-            <p>value — no migration projects, no training programs</p>
-          </div>
-        </div>
-      </div>
+    <section class="benefits reveal">
+      <div class="benefit"><span class="benefit-num">~9 hrs</span><p>of busywork removed per person, every week</p></div>
+      <div class="benefit"><span class="benefit-num">1 source</span><p>of truth instead of a dozen disconnected tools</p></div>
+      <div class="benefit"><span class="benefit-num">Day 1</span><p>value — no migration project, no training program</p></div>
     </section>
 
     <!-- PRIVACY -->
-    <section class="section" id="privacy">
-      <div class="container split">
-        <div class="split-text reveal">
-          <span class="eyebrow">Privacy &amp; control</span>
-          <h2>Your data never leaves your control.</h2>
-          <p class="lead">
-            Powerful only matters if it's trusted. With Fast Fleet, every file stays available
-            locally to you by default — and you decide, source by source, exactly what the brain
-            can see and act on.
-          </p>
-          <ul class="check-list">
-            <li>Files stay local and private unless you choose to connect them</li>
-            <li>Granular, per-source permissions — turn any connection on or off instantly</li>
-            <li>We never train external models on your company's data</li>
-            <li>Full audit trail of everything the brain reads and does</li>
-          </ul>
+    <section class="panel split reveal" id="privacy">
+      <div class="split-text">
+        <span class="eyebrow">Privacy &amp; control</span>
+        <h2>Your data never leaves your control.</h2>
+        <p class="lead">Powerful only matters if it's trusted. Every file stays local to you by default — and you decide, source by source, exactly what the brain can see and act on.</p>
+        <ul class="check-list">
+          <li>Files stay local and private unless you connect them</li>
+          <li>Per-source permissions — turn any connection on or off instantly</li>
+          <li>We never train outside models on your company's data</li>
+          <li>A full audit trail of everything the brain reads and does</li>
+        </ul>
+      </div>
+      <div class="privacy-card">
+        <div class="privacy-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
         </div>
-        <div class="split-visual reveal">
-          <div class="card privacy-card">
-            <div class="privacy-lock">🔒</div>
-            <div class="toggle-row"><span>Local files</span><span class="pill on">Private</span></div>
-            <div class="toggle-row"><span>Email &amp; calendar</span><span class="pill on">You control</span></div>
-            <div class="toggle-row"><span>CRM records</span><span class="pill on">You control</span></div>
-            <div class="toggle-row"><span>Model training</span><span class="pill off">Never</span></div>
-          </div>
-        </div>
+        <div class="toggle-row"><span>Local files</span><span class="pill on">Private</span></div>
+        <div class="toggle-row"><span>Email &amp; calendar</span><span class="pill on">You control</span></div>
+        <div class="toggle-row"><span>CRM records</span><span class="pill on">You control</span></div>
+        <div class="toggle-row"><span>External model training</span><span class="pill off">Never</span></div>
       </div>
     </section>
 
     <!-- CASE STUDY -->
-    <section class="section" id="case-study">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">In action</span>
-          <h2>A day at a 60-person agency, with Fast Fleet.</h2>
-          <p class="lead">
-            Here's what "integrated, not isolated" actually looks like — one connected flow,
-            running quietly across the team's normal day.
-          </p>
-        </div>
-
-        <div class="timeline">
-          <div class="card t-step reveal">
-            <span class="t-time">9:30</span>
-            <h3>The client call wraps</h3>
-            <p>Fast Fleet captures the meeting, writes clean notes, and files them to the right project — before anyone opens their laptop.</p>
-          </div>
-          <div class="card t-step reveal">
-            <span class="t-time">9:45</span>
-            <h3>Website edits, drafted</h3>
-            <p>Based on what the client asked for, it drafts the copy changes and stages them on the site, ready for a one-click human review.</p>
-          </div>
-          <div class="card t-step reveal">
-            <span class="t-time">10:10</span>
-            <h3>Follow-ups, handled</h3>
-            <p>It flags the three customers waiting on a reply, drafts personalized follow-ups, and queues them for the account lead to send.</p>
-          </div>
-          <div class="card t-step reveal">
-            <span class="t-time">EOD</span>
-            <h3>Nothing slips</h3>
-            <p>Every action lands in the same connected brain — so the next person picks up exactly where the last one left off.</p>
-          </div>
-        </div>
-      </div>
+    <section class="section-head reveal" id="case-study">
+      <span class="eyebrow">In action</span>
+      <h2>A day at a 60-person agency.</h2>
+      <p class="lead">What "integrated, not isolated" actually looks like — one connected flow, running quietly across a normal day.</p>
     </section>
+    <div class="timeline">
+      <article class="t-step reveal"><span class="t-time">09:30</span><h3>The client call wraps</h3><p>Fast Fleet captures the meeting, writes clean notes, and files them to the right project before anyone opens a laptop.</p></article>
+      <article class="t-step reveal"><span class="t-time">09:45</span><h3>Website edits, drafted</h3><p>From what the client asked for, it drafts the copy changes and stages them on the site for a one-click human review.</p></article>
+      <article class="t-step reveal"><span class="t-time">10:10</span><h3>Follow-ups, handled</h3><p>It flags the three customers waiting on a reply, drafts personal follow-ups, and queues them for the account lead.</p></article>
+      <article class="t-step reveal"><span class="t-time">EOD</span><h3>Nothing slips</h3><p>Every action lands in the same connected brain, so the next person picks up exactly where the last left off.</p></article>
+    </div>
 
     <!-- TEAM -->
-    <section class="section" id="team">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">The team</span>
-          <h2>Built by people who teach this for a living.</h2>
-          <p class="lead">
-            Fast Fleet comes from researchers and builders who've spent their careers at the
-            frontier of AI — and now bring it into the businesses that need it most.
-          </p>
-        </div>
-
-        <div class="team-grid">
-          <article class="card member reveal">
-            <div class="avatar"><span>SR</span><em class="avatar-tag">Photo</em></div>
-            <h3>Sriram</h3>
-            <span class="role">Co-founder &amp; CEO</span>
-            <p>AI researcher and university lecturer. Has spent a decade turning machine-learning research into products teams actually use.</p>
-          </article>
-          <article class="card member reveal">
-            <div class="avatar"><span>GR</span><em class="avatar-tag">Photo</em></div>
-            <h3>Grigore</h3>
-            <span class="role">Co-founder &amp; CTO</span>
-            <p>Systems engineer and professor. Builds the integration backbone that lets the company brain connect to anything, securely.</p>
-          </article>
-          <article class="card member reveal">
-            <div class="avatar"><span>JE</span><em class="avatar-tag">Photo</em></div>
-            <h3>Jessy</h3>
-            <span class="role">Co-founder &amp; Head of Product</span>
-            <p>Designs how humans and AI work together. Obsessed with making powerful technology feel effortless to adopt.</p>
-          </article>
-        </div>
-      </div>
+    <section class="section-head reveal" id="team">
+      <span class="eyebrow">The team</span>
+      <h2>Built by people who teach this.</h2>
+      <p class="lead">Fast Fleet comes from researchers and builders who've spent their careers at the frontier of AI — now bringing it into the businesses that need it.</p>
     </section>
+    <div class="team-grid">
+      <article class="member reveal"><div class="avatar"><span>SR</span><em class="avatar-tag">Photo</em></div><h3>Sriram</h3><span class="role">Co-founder &amp; CEO</span><p>AI researcher and university lecturer. A decade turning machine-learning research into products teams actually use.</p></article>
+      <article class="member reveal"><div class="avatar"><span>GR</span><em class="avatar-tag">Photo</em></div><h3>Grigore</h3><span class="role">Co-founder &amp; CTO</span><p>Systems engineer and professor. Builds the integration backbone that lets the brain connect to anything, securely.</p></article>
+      <article class="member reveal"><div class="avatar"><span>JE</span><em class="avatar-tag">Photo</em></div><h3>Jessy</h3><span class="role">Co-founder &amp; Head of Product</span><p>Designs how humans and AI work together. Set on making powerful technology feel effortless to adopt.</p></article>
+    </div>
 
     <!-- THESIS -->
-    <section class="section thesis-section" id="thesis">
-      <div class="container">
-        <div class="thesis reveal">
-          <span class="eyebrow center">The thesis</span>
-          <p class="thesis-lead">
-            It's not a question of <em>if</em> you'll adopt AI. You almost certainly already have —
-            someone on your team is using it for some isolated task right now.
-          </p>
-          <blockquote class="thesis-quote">
-            “AI may be the most powerful innovation in human history. It isn't going anywhere.
-            Integrating it <span class="grad">meaningfully</span> into how you work doesn't replace
-            your people — it changes their role to <span class="grad">orchestrators</span>, free to
-            do more, and do it better.”
-          </blockquote>
-          <p class="thesis-foot">
-            But just because a tool feels simple doesn't mean it's actually integrated into the
-            way your team works. That's the gap Fast Fleet closes — and it's the difference between
-            dabbling in AI and being powered by it.
-          </p>
+    <section class="panel thesis reveal">
+      <span class="eyebrow center">The thesis</span>
+      <p class="thesis-lead">It's not a question of <em>if</em> you'll adopt AI. You almost certainly already have — someone on your team is using it for some isolated task right now.</p>
+      <blockquote class="thesis-quote">AI doesn't replace your people. It changes their role to orchestrators — free to do more, and do it better.</blockquote>
+      <p class="thesis-foot">But a tool feeling simple doesn't mean it's integrated into how your team actually works. That gap is what Fast Fleet closes — the difference between dabbling in AI and running on it.</p>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-block fast-liquid-metal-css" id="contact">
+      <div class="cta-inner">
+        <h2>Put a company brain to work in your business.</h2>
+        <p>Book a 30-minute call. We'll map where Fast Fleet fits your workflows and show you the time you'd get back.</p>
+        <div class="cta-actions">
+          <a href="mailto:hello@fleet.fast?subject=Book%20a%20call%20—%20Fast%20Fleet" class="btn btn-chrome btn-lg">Book a call</a>
+          <a href="mailto:hello@fleet.fast" class="btn btn-ghost-light btn-lg">hello@fleet.fast</a>
         </div>
+        <p class="cta-fine">For teams of 10–200 · set up in days, not months</p>
       </div>
     </section>
 
-    <!-- CONTACT / CONVERSION -->
-    <section class="section cta-section" id="contact">
-      <div class="container">
-        <div class="cta-card reveal">
-          <h2>Let's put a company brain to work in your business.</h2>
-          <p>
-            Book a 30-minute call. We'll map where Fast Fleet fits your workflows and show you the
-            time you'd get back — no slides, no fluff.
-          </p>
-          <div class="cta-actions">
-            <a href="mailto:hello@fleet.fast?subject=Book%20a%20call%20—%20Fast%20Fleet" class="btn btn-primary btn-lg">Book a call <span class="arrow">&rarr;</span></a>
-            <a href="mailto:hello@fleet.fast" class="btn btn-ghost btn-lg">hello@fleet.fast</a>
-          </div>
-          <p class="cta-fine">For teams of 10–200. Setup in days, not months.</p>
-        </div>
-      </div>
-    </section>
-  </main>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <a href="#home" class="brand"><img src="/fast-logo-dark.svg" alt="Fast" class="brand-logo" /><span class="brand-sep" aria-hidden="true"></span><span class="brand-sub">Fleet</span></a>
+      <span class="mono-label dim">© 2026 Fast Fleet · the company brain</span>
+      <a href="#contact" class="mono-label foot-cta">Book a call →</a>
+    </footer>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <a href="#home" class="brand"><span class="brand-mark" aria-hidden="true"></span> Fast&nbsp;Fleet</a>
-      <span class="footer-copy">© 2026 Fast Fleet. The company brain.</span>
-      <a href="#contact" class="footer-cta">Book a call &rarr;</a>
-    </div>
-  </footer>
+  </div>
 
   <script src="/main.js" defer></script>
 </body>

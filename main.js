@@ -2,7 +2,7 @@
 
 // Sticky nav state
 const nav = document.getElementById('nav');
-const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 20);
+const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 12);
 onScroll();
 window.addEventListener('scroll', onScroll, { passive: true });
 
@@ -16,14 +16,14 @@ document.querySelectorAll('#navLinks a').forEach((a) =>
   a.addEventListener('click', () => nav.classList.remove('open'))
 );
 
-// Scroll reveal + staggering within groups
-const groups = ['.feature-grid', '.team-grid', '.timeline'];
-groups.forEach((sel) => {
+// Stagger within grouped reveals
+['.feature-grid', '.team-grid', '.timeline'].forEach((sel) => {
   document.querySelectorAll(`${sel} .reveal`).forEach((el, i) => {
-    el.style.setProperty('--d', `${i * 0.08}s`);
+    el.style.setProperty('--d', `${i * 0.07}s`);
   });
 });
 
+// Scroll reveal
 const revealObserver = new IntersectionObserver(
   (entries, obs) => {
     entries.forEach((entry) => {
@@ -37,7 +37,7 @@ const revealObserver = new IntersectionObserver(
 );
 document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
 
-// Animate the adoption chart when it enters view
+// Animate adoption chart when it scrolls into view
 const chart = document.getElementById('chart');
 if (chart) {
   const chartObserver = new IntersectionObserver(
@@ -49,22 +49,7 @@ if (chart) {
         }
       });
     },
-    { threshold: 0.35 }
+    { threshold: 0.3 }
   );
   chartObserver.observe(chart);
-}
-
-// Subtle parallax on ambient glows
-const glowA = document.querySelector('.glow-a');
-const glowB = document.querySelector('.glow-b');
-if (glowA && glowB && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  window.addEventListener(
-    'scroll',
-    () => {
-      const y = window.scrollY;
-      glowA.style.transform = `translateY(${y * 0.08}px)`;
-      glowB.style.transform = `translateY(${y * -0.06}px)`;
-    },
-    { passive: true }
-  );
 }
