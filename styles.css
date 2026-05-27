@@ -23,7 +23,7 @@
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 
 body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'General Sans', 'DM Sans', system-ui, -apple-system, sans-serif;
   background: var(--bg);
   color: var(--fg);
   line-height: 1.6;
@@ -188,7 +188,7 @@ h2 { font-size: clamp(1.9rem, 4vw, 2.9rem); font-weight: 800; letter-spacing: -0
   background: linear-gradient(90deg, #3a4566, #5566a8);
   transition: width 1.1s var(--ease);
 }
-.chart.animate .bar { width: var(--w); }
+#chart.animate .bar { width: var(--w); }
 .bar-accent { background: var(--grad); box-shadow: 0 0 18px rgba(137,130,255,0.6); }
 .bar-val { font-size: 0.9rem; color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; }
 .bar-row.featured .bar-label,
