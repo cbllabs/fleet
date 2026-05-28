@@ -75,14 +75,31 @@ document.querySelectorAll('.feature').forEach((f) => {
   });
 });
 
-// Timeline — click a card to expand details over the timeline; X (or Escape) closes
+// Timeline — place each item exactly on the curve, expand details on click
 const timeline = document.getElementById('timeline');
 if (timeline) {
+  const path = timeline.querySelector('.t-curve path');
+  const items = timeline.querySelectorAll('.t-item');
   const detail = timeline.querySelector('.t-detail');
   const detailTime = detail.querySelector('.t-detail-time');
   const detailTitle = detail.querySelector('.t-detail-title');
   const detailDesc = detail.querySelector('.t-detail-desc');
   const closeBtn = detail.querySelector('.t-detail-close');
+
+  const viewBoxW = 1200;
+  const viewBoxH = 360;
+  const fractions = [0.125, 0.375, 0.625, 0.875];
+  const layout = () => {
+    if (!path) return;
+    const len = path.getTotalLength();
+    items.forEach((item, i) => {
+      const p = path.getPointAtLength(len * fractions[i]);
+      item.style.setProperty('--x', `${(p.x / viewBoxW) * 100}%`);
+      item.style.setProperty('--y', `${(p.y / viewBoxH) * 100}%`);
+    });
+  };
+  layout();
+  window.addEventListener('resize', layout, { passive: true });
 
   const open = (item) => {
     detailTime.textContent = item.dataset.time;
@@ -96,7 +113,7 @@ if (timeline) {
     detail.hidden = true;
   };
 
-  timeline.querySelectorAll('.t-item').forEach((item) => {
+  items.forEach((item) => {
     item.querySelector('.t-card').addEventListener('click', () => open(item));
   });
   closeBtn.addEventListener('click', close);
