@@ -194,7 +194,7 @@ h3 { font-size: clamp(1.2rem, 2.4vw, 1.5rem); line-height: 1.15; }
 /* Compact glass pill in the hero: toggle + "Fast Fleet" label */
 .hero-glass {
   position: absolute; z-index: 2;
-  bottom: clamp(20px, 3vw, 36px);
+  top: clamp(20px, 3vw, 36px);
   left: 50%; transform: translateX(-50%);
   display: inline-flex; align-items: center; gap: 12px;
   padding: 8px 16px 8px 10px;
@@ -205,7 +205,10 @@ h3 { font-size: clamp(1.2rem, 2.4vw, 1.5rem); line-height: 1.15; }
   -webkit-backdrop-filter: blur(18px) saturate(140%);
   box-shadow: 0 14px 36px -16px rgba(0,0,0,0.55);
   color: var(--on-dark);
+  opacity: 0.7;
+  transition: opacity .35s var(--ease-out);
 }
+.hero.is-on .hero-glass { opacity: 1; }
 .hero-switch-btn {
   background: transparent; border: 0; padding: 2px;
   cursor: pointer; border-radius: var(--radius-pill);
@@ -242,7 +245,7 @@ h3 { font-size: clamp(1.2rem, 2.4vw, 1.5rem); line-height: 1.15; }
 
 /* One-line tagline above the hero visual */
 .hero-tagline {
-  margin: clamp(28px, 4vw, 48px) 0 clamp(18px, 2vw, 24px);
+  margin: clamp(28px, 4vw, 48px) 0;
   text-align: center;
 }
 .hero-tagline h1 {
