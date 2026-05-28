@@ -105,12 +105,10 @@ if (timeline) {
     detailTime.textContent = item.dataset.time;
     detailTitle.textContent = item.dataset.title;
     detailDesc.textContent = item.dataset.desc;
-    detail.hidden = false;
     timeline.classList.add('is-open');
   };
   const close = () => {
     timeline.classList.remove('is-open');
-    detail.hidden = true;
   };
 
   items.forEach((item) => {
