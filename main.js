@@ -6,7 +6,7 @@ const heroEl = document.getElementById('home');
 heroToggle?.addEventListener('click', () => {
   const on = heroEl.classList.toggle('is-on');
   heroToggle.setAttribute('aria-checked', String(on));
-  heroToggle.setAttribute('aria-label', on ? 'Turn Fleet off' : 'Turn Fleet on');
+  heroToggle.setAttribute('aria-label', on ? 'Turn Fast Fleet off' : 'Turn Fast Fleet on');
 });
 
 // Sticky nav state
@@ -26,7 +26,7 @@ document.querySelectorAll('#navLinks a').forEach((a) =>
 );
 
 // Stagger within grouped reveals
-['.feature-grid', '.team-grid', '.cases'].forEach((sel) => {
+['.feature-grid', '.team-grid'].forEach((sel) => {
   document.querySelectorAll(`${sel} .reveal`).forEach((el, i) => {
     el.style.setProperty('--d', `${i * 0.07}s`);
   });
@@ -75,26 +75,32 @@ document.querySelectorAll('.feature').forEach((f) => {
   });
 });
 
-// Case study — click a tile to expand it, others collapse to switchable chips; X closes
-const cases = document.getElementById('cases');
-if (cases) {
-  const items = [...cases.querySelectorAll('.case')];
-  const close = () => {
-    cases.classList.remove('is-open');
-    items.forEach((c) => c.classList.remove('active'));
+// Timeline — click a card to expand details over the timeline; X (or Escape) closes
+const timeline = document.getElementById('timeline');
+if (timeline) {
+  const detail = timeline.querySelector('.t-detail');
+  const detailTime = detail.querySelector('.t-detail-time');
+  const detailTitle = detail.querySelector('.t-detail-title');
+  const detailDesc = detail.querySelector('.t-detail-desc');
+  const closeBtn = detail.querySelector('.t-detail-close');
+
+  const open = (item) => {
+    detailTime.textContent = item.dataset.time;
+    detailTitle.textContent = item.dataset.title;
+    detailDesc.textContent = item.dataset.desc;
+    detail.hidden = false;
+    timeline.classList.add('is-open');
   };
-  items.forEach((el) => {
-    el.addEventListener('click', (e) => {
-      if (e.target.closest('.case-close')) {
-        e.stopPropagation();
-        close();
-        return;
-      }
-      cases.classList.add('is-open');
-      items.forEach((c) => c.classList.toggle('active', c === el));
-    });
+  const close = () => {
+    timeline.classList.remove('is-open');
+    detail.hidden = true;
+  };
+
+  timeline.querySelectorAll('.t-item').forEach((item) => {
+    item.querySelector('.t-card').addEventListener('click', () => open(item));
   });
+  closeBtn.addEventListener('click', close);
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && cases.classList.contains('is-open')) close();
+    if (e.key === 'Escape' && timeline.classList.contains('is-open')) close();
   });
 }
