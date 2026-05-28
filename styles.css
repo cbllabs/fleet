@@ -300,6 +300,20 @@ h3 { font-size: clamp(1.2rem, 2.4vw, 1.5rem); line-height: 1.15; }
 .section-head { max-width: 700px; margin: 96px auto 44px; text-align: center; }
 .section-head .lead { margin-left: auto; margin-right: auto; }
 
+/* Adoption — decorative chrome accent in the top-right */
+#adoption { position: relative; overflow: hidden; }
+#adoption .panel-head, #adoption .chart { position: relative; z-index: 1; }
+.adoption-chrome {
+  position: absolute;
+  top: clamp(-10px, 0vw, 10px);
+  right: clamp(-40px, -1.5vw, -10px);
+  height: clamp(260px, 34vw, 440px);
+  width: auto;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
 /* ===== Chart ===== */
 .chart-head { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 26px; }
 .bar-row {
@@ -593,6 +607,7 @@ h3 { font-size: clamp(1.2rem, 2.4vw, 1.5rem); line-height: 1.15; }
   .timeline { min-height: 380px; }
   .t-stage { height: 320px; }
   .t-detail { grid-template-columns: 1fr; }
+  .adoption-chrome { display: none; }
 }
 @media (max-width: 680px) {
   .nav-links, .nav-cta { display: none; }
