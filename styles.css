@@ -305,9 +305,9 @@ h3 { font-size: clamp(1.2rem, 2.4vw, 1.5rem); line-height: 1.15; }
 #adoption .panel-head, #adoption .chart { position: relative; z-index: 1; }
 .adoption-chrome {
   position: absolute;
-  top: clamp(-10px, 0vw, 10px);
-  right: clamp(-40px, -1.5vw, -10px);
-  height: clamp(260px, 34vw, 440px);
+  top: clamp(-100px, -7vw, -40px);
+  right: clamp(-240px, -16vw, -120px);
+  height: clamp(440px, 48vw, 660px);
   width: auto;
   pointer-events: none;
   user-select: none;
