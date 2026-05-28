@@ -1,5 +1,14 @@
 // Fast Fleet — interactions
 
+// Hero "Fleet" toggle — crossfade between background images
+const heroToggle = document.getElementById('heroToggle');
+const heroEl = document.getElementById('home');
+heroToggle?.addEventListener('click', () => {
+  const on = heroEl.classList.toggle('is-on');
+  heroToggle.setAttribute('aria-checked', String(on));
+  heroToggle.setAttribute('aria-label', on ? 'Turn Fleet off' : 'Turn Fleet on');
+});
+
 // Sticky nav state
 const nav = document.getElementById('nav');
 const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 12);
