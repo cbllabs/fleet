@@ -234,8 +234,8 @@ h3 { font-size: clamp(1.2rem, 2.4vw, 1.5rem); line-height: 1.15; }
   top: clamp(18px, 3vw, 44px);
   left: clamp(18px, 3vw, 44px);
   right: clamp(18px, 3vw, 44px);
-  max-width: 620px;
-  padding: clamp(22px, 3vw, 36px);
+  max-width: 520px;
+  padding: clamp(18px, 2.2vw, 26px) clamp(20px, 2.4vw, 28px);
   border-radius: var(--radius-2xl);
   background: rgba(18, 20, 26, 0.34);
   border: 1px solid rgba(255,255,255,0.16);
@@ -244,30 +244,15 @@ h3 { font-size: clamp(1.2rem, 2.4vw, 1.5rem); line-height: 1.15; }
   box-shadow: 0 24px 60px -22px rgba(0,0,0,0.55);
   color: var(--on-dark);
 }
-.hero-glass-eyebrow {
-  display: block;
-  font-family: var(--font-mono);
-  font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
-  color: rgba(246,248,250,0.78);
-  margin-bottom: 14px;
-}
 .hero-glass h1 {
   color: var(--on-dark);
-  font-size: clamp(2rem, 4.6vw, 3.6rem);
-  letter-spacing: -0.045em; line-height: 1.02;
-  margin: 0 0 14px;
+  font-size: clamp(1.6rem, 3.4vw, 2.6rem);
+  letter-spacing: -0.04em; line-height: 1.05;
+  margin: 0 0 18px;
   max-width: 18ch;
   text-shadow: 0 2px 28px rgba(0,0,0,0.4);
 }
-.hero-glass p {
-  max-width: 48ch;
-  font-size: clamp(0.98rem, 1.4vw, 1.1rem);
-  color: rgba(246,248,250,0.9);
-}
-.hero-glass .hero-ctas {
-  margin-top: 26px;
-  display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
-}
+.hero-glass .hero-switch { margin-top: 4px; }
 
 /* ===== Stats strip ===== */
 .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 16px; }
